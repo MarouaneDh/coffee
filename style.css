@@ -1,0 +1,480 @@
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    font-family: 'Courier New', monospace;
+    margin: 0;
+    padding: 0;
+    background-color: #332927;
+    color: #f5f0e1;
+    line-height: 1.6;
+}
+
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: transparent;
+    padding: 25px 0;
+    box-shadow: none;
+    z-index: 10;
+}
+
+header h1 {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    font-size: 2.8em;
+    letter-spacing: 3px;
+    color: #f5f0e1;
+    text-shadow: #000 1px 0 10px;
+    width: max-content;
+}
+
+header nav ul {
+    list-style: none;
+    margin: 20px 0 0 0;
+    padding: 0;
+    text-align: center;
+}
+
+header nav ul li {
+    display: inline-block;
+    margin: 0 20px;
+}
+
+header nav ul li a {
+    background-color: #5c4033;
+    color: #f5f0e1;
+    padding: 10px 35px;
+    border: 2px solid #8b795e;
+    border-radius: 10px;
+    text-decoration: none;
+    font-size: 1.2em;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+header nav ul li a:hover {
+    background-color: #8b795e;
+    color: #332927;
+}
+
+#hero {
+    background-image: url('images/coffee-beans.jpeg');
+    background-size: cover;
+    background-position: center;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    padding-top: 80px;
+}
+
+#hero .container {
+    text-align: center;
+    color: #f5f0e1;
+}
+
+#hero h2 {
+    font-size: 3.5em;
+    margin-bottom: 25px;
+    text-shadow: #000 1px 0 10px;
+}
+
+#hero p {
+    font-size: 1.5em;
+    margin-bottom: 35px;
+    text-shadow: #000 1px 0 10px;
+}
+
+#hero .btn {
+    background-color: #5c4033;
+    color: #f5f0e1;
+    padding: 18px 35px;
+    border: 2px solid #8b795e;
+    border-radius: 10px;
+    text-decoration: none;
+    font-size: 1.2em;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#hero .btn:hover {
+    background-color: #8b795e;
+    color: #332927;
+    transform: scale(1.05);
+}
+
+#about,
+#menu,
+#contact {
+    padding: 20px 0;
+    text-align: center;
+    background-color: #4a3833;
+}
+
+#about h2,
+#menu h2,
+#contact h2 {
+    font-size: 2.8em;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #8b795e;
+    position: relative;
+    display: inline-block;
+}
+
+#about h2::after,
+#menu h2::after,
+#contact h2::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -12px;
+    transform: translateX(-50%);
+    width: 70px;
+    height: 3px;
+    background-color: #8b795e;
+}
+
+#about .container,
+#menu .container,
+#contact .container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+#about p {
+    font-size: 1.2em;
+    line-height: 1.8;
+    margin-bottom: 35px;
+    color: #ddd;
+}
+
+.menu-items {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.menu-item {
+    text-align: center;
+    background-color: #5c4033;
+    padding: 35px;
+    border-radius: 12px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25);
+    transition: transform 0.3s ease;
+    color: #f5f0e1;
+}
+
+.menu-item:hover {
+    transform: translateY(-6px);
+}
+
+.menu-item img {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    margin-bottom: 28px;
+    border: 3px solid #8b795e;
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.menu-item h3 {
+    font-size: 1.9em;
+    margin-bottom: 18px;
+    font-weight: bold;
+    color: #8b795e;
+}
+
+.menu-item p {
+    font-size: 1.15em;
+    line-height: 1.7;
+    color: #ddd;
+}
+
+#contact form {
+    max-width: 650px;
+    margin: 45px auto;
+}
+
+#contact input,
+#contact textarea {
+    width: 100%;
+    padding: 18px;
+    margin-bottom: 28px;
+    border: 2px solid #8b795e;
+    border-radius: 9px;
+    box-sizing: border-box;
+    font-size: 1.05em;
+    font-family: inherit;
+    background-color: #5c4033;
+    color: #f5f0e1;
+    transition: border-color 0.3s ease;
+}
+
+#contact input:focus,
+#contact textarea:focus {
+    outline: none;
+    border-color: #8b795e;
+}
+
+#contact button {
+    background-color: #5c4033;
+    color: #f5f0e1;
+    padding: 19px 38px;
+    border: none;
+    border-radius: 11px;
+    font-size: 1.25em;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#contact button:hover {
+    background-color: #8b795e;
+    color: #332927;
+    transform: scale(1.05);
+}
+
+footer {
+    background-color: #5c4033;
+    color: #f5f0e1;
+    padding: 25px 0;
+    text-align: center;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.3);
+}
+
+footer p {
+    margin: 0;
+    font-size: 1.1em;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+    header h1 {
+        font-size: 2.5em;
+    }
+
+    header nav ul li a {
+        padding: 8px 25px;
+        font-size: 1.1em;
+    }
+
+    #hero h2 {
+        font-size: 3em;
+    }
+
+    #hero p {
+        font-size: 1.4em;
+    }
+}
+
+@media (max-width: 992px) {
+    header h1 {
+        font-size: 1.4em;
+    }
+
+    header nav ul li {
+        margin: 0 15px;
+    }
+
+    header nav ul li a {
+        padding: 8px 20px;
+        font-size: 1em;
+    }
+
+    #hero h2 {
+        font-size: 2.8em;
+    }
+
+    #hero p {
+        font-size: 1.3em;
+    }
+
+    .menu-items {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    header nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    #hero h2 {
+        font-size: 2.6em;
+    }
+
+    #hero p {
+        font-size: 1.2em;
+    }
+
+    .menu-items {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 2em;
+    }
+
+    header nav ul li a {
+        padding: 6px 15px;
+    }
+
+    #hero h2 {
+        font-size: 2.4em;
+    }
+
+    #hero p {
+        font-size: 1.1em;
+    }
+
+    .menu-items {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1em;
+        margin-top: 0.6em;
+    }
+
+    header nav ul li a {
+        font-size: 0.9em;
+    }
+
+    #hero h2 {
+        font-size: 2.2em;
+    }
+
+    #hero p {
+        font-size: 1em;
+    }
+
+    .menu-items {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 380px) {
+    header nav ul li a {
+        font-size: 0.8em;
+        padding: 5px 12px;
+    }
+
+    #hero h2 {
+        font-size: 2em;
+    }
+
+    #hero p {
+        font-size: 0.9em;
+    }
+}
+
+.burger-menu {
+    display: none;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    position: absolute;
+    right: 10px;
+    z-index: 11;
+}
+
+.burger-menu .bar {
+    width: 25px;
+    height: 3px;
+    background-color: #f5f0e1;
+    margin: 5px 0;
+    transition: 0.4s;
+}
+
+nav {
+    display: flex;
+    /* For normal screen sizes */
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    .burger-menu {
+        display: block;
+        /* Show burger menu on smaller screens */
+    }
+
+    nav {
+        display: none;
+        /* Hide navigation by default on smaller screens */
+        flex-direction: column;
+        position: absolute;
+        top: 80px;
+        /* Adjust as needed */
+        left: 0;
+        width: 100%;
+        background-color: #5c4033;
+        /* Background for the dropdown */
+        z-index: 10;
+    }
+
+    nav.active {
+        display: flex;
+        /* Show navigation when active */
+    }
+
+    nav ul {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    nav ul li {
+        text-align: center;
+        width: 100%;
+    }
+
+    nav ul li a {
+        display: block;
+        padding: 15px 0;
+        width: 100%;
+        box-sizing: border-box;
+        border: none;
+    }
+}
+
+/* ... (your existing CSS) ... */
+
+header .header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    height: 50px;
+    margin: 0 15px;
+    border-radius: 10px;
+}
